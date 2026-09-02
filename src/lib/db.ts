@@ -37,9 +37,12 @@ export interface NewBooking {
 
 export async function createBooking(b: NewBooking): Promise<string> {
   const ids = await getServiceIds();
-  const { data, error } = await supabase
+  // 匿名插入受 RLS 保护：不能用 RETURNING（需要 SELECT 权限），故 id 在客户端生成
+  const id = crypto.randomUUID();
+  const { error } = await supabase
     .from('Booking')
     .insert({
+      id,
       user_id: null,
       service_id: ids[b.serviceKey],
       tier_level: b.tier ?? null,
@@ -48,12 +51,10 @@ export async function createBooking(b: NewBooking): Promise<string> {
       scheduled_at: b.slot ? slotToISO(b.slot.date, b.slot.hour) : null,
       notes: b.preferredTime,
       contact_info: { gameId: b.gameId, wechat: b.wechat, description: b.description },
-    })
-    .select('id')
-    .single();
+    });
   if (error) throw error;
-  if (b.slot) await occupySlotRemote(b.slot.date, b.slot.hour, data.id);
-  return data.id as string;
+  if (b.slot) await occupySlotRemote(b.slot.date, b.slot.hour, id);
+  return id;
 }
 
 export interface BookingRow {
@@ -147,11 +148,12 @@ export async function toggleSlotRemote(date: string, hour: number): Promise<void
 }
 
 async function occupySlotRemote(date: string, hour: number, bookingId: string) {
-  const { error } = await supabase
-    .from('CoachSchedule')
-    .update({ booking_id: bookingId })
-    .eq('date', date)
-    .eq('start_time', slotToISO(date, hour));
+  // RLS 下游客无权直接 update CoachSchedule，走 SECURITY DEFINER RPC
+  const { error } = await supabase.rpc('occupy_slot', {
+    p_date: date,
+    p_start: slotToISO(date, hour),
+    p_booking_id: bookingId,
+  });
   if (error) throw error;
 }
 

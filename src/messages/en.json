@@ -153,9 +153,15 @@
     "tests": {
       "start": "Start Test",
       "retry": "Retry",
-      "mouse_control": { "hint": "Keep your crosshair inside the moving red target for 20 seconds" },
-      "left_precision": { "hint": "When a target appears, flick left and click it — 8 trials" },
-      "right_precision": { "hint": "When a target appears, flick right and click it — 8 trials" },
+      "mouse_control": {
+        "hint": "Keep your crosshair inside the moving red target for 20 seconds"
+      },
+      "left_precision": {
+        "hint": "When a target appears, flick left and click it — 8 trials"
+      },
+      "right_precision": {
+        "hint": "When a target appears, flick right and click it — 8 trials"
+      },
       "reaction": {
         "hint": "Click the moment the panel turns gold — 5 trials",
         "tap_start": "Click to start",
@@ -210,22 +216,58 @@
     },
     "teams_title": "Team History",
     "teams": {
-      "team1": { "name": "Nova Esports Academy", "role": "Head Coach · Tactical system building", "achievement": "Academy League Runner-up" },
-      "team2": { "name": "Rising Stars", "role": "Tactical Coach · Demo review system", "achievement": "Regional Qualifier Champion" },
-      "team3": { "name": "Individual Player Camp", "role": "Personal Coach · Talent assessment system", "achievement": "12 players signed to pro academies" }
+      "team1": {
+        "name": "Nova Esports Academy",
+        "role": "Head Coach · Tactical system building",
+        "achievement": "Academy League Runner-up"
+      },
+      "team2": {
+        "name": "Rising Stars",
+        "role": "Tactical Coach · Demo review system",
+        "achievement": "Regional Qualifier Champion"
+      },
+      "team3": {
+        "name": "Individual Player Camp",
+        "role": "Personal Coach · Talent assessment system",
+        "achievement": "12 players signed to pro academies"
+      }
     },
     "players_title": "Star Players",
     "players": {
-      "p1": { "name": "PlayerOne", "note": "Rifler · signed to a pro academy after 8 months" },
-      "p2": { "name": "Shadow", "note": "AWPer · AWP hit rate up 18%" },
-      "p3": { "name": "Flash", "note": "Entry fragger · opening duel success up 22%" },
-      "p4": { "name": "Anchor", "note": "Support · KAST up 9%" }
+      "p1": {
+        "name": "PlayerOne",
+        "note": "Rifler · signed to a pro academy after 8 months"
+      },
+      "p2": {
+        "name": "Shadow",
+        "note": "AWPer · AWP hit rate up 18%"
+      },
+      "p3": {
+        "name": "Flash",
+        "note": "Entry fragger · opening duel success up 22%"
+      },
+      "p4": {
+        "name": "Anchor",
+        "note": "Support · KAST up 9%"
+      }
     },
     "endorsements_title": "Endorsements",
     "endorsements": {
-      "e1": { "quote": "The coach dissects tactical details with real clarity — our mid-round decision-making jumped a level.", "author": "K.", "title": "Team Captain" },
-      "e2": { "quote": "The talent assessment showed me my weaknesses for the first time. Three months of targeted training later, my Rating is up 0.2.", "author": "M.", "title": "Academy Player" },
-      "e3": { "quote": "Reviews don't just find problems — they hand you a training list you can execute immediately.", "author": "Z.", "title": "Individual Student" }
+      "e1": {
+        "quote": "The coach dissects tactical details with real clarity — our mid-round decision-making jumped a level.",
+        "author": "K.",
+        "title": "Team Captain"
+      },
+      "e2": {
+        "quote": "The talent assessment showed me my weaknesses for the first time. Three months of targeted training later, my Rating is up 0.2.",
+        "author": "M.",
+        "title": "Academy Player"
+      },
+      "e3": {
+        "quote": "Reviews don't just find problems — they hand you a training list you can execute immediately.",
+        "author": "Z.",
+        "title": "Individual Student"
+      }
     },
     "cta_title": "Want your name on this wall?",
     "cta_desc": "Book a 1-on-1 session or take the free talent assessment to start your systematic improvement.",
@@ -266,7 +308,15 @@
     "schedule_title": "Schedule Management",
     "schedule_hint": "Click a slot to toggle open/closed. Booked slots cannot be cancelled.",
     "this_week": "This Week",
-    "weekdays": { "mon": "Mon", "tue": "Tue", "wed": "Wed", "thu": "Thu", "fri": "Fri", "sat": "Sat", "sun": "Sun" },
+    "weekdays": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
     "slot_open": "Open",
     "slot_booked": "Booked",
     "bookings_title": "Bookings",
@@ -316,7 +366,8 @@
     "assessment": "Assessment",
     "about": "About",
     "contact_title": "Contact",
-    "wechat": "WeChat"
+    "wechat": "WeChat",
+    "staff_login": "Staff Login"
   },
   "common": {
     "login": "Login",
@@ -327,5 +378,21 @@
     "confirm": "Confirm",
     "loading": "Loading...",
     "coming_soon": "Coming Soon"
+  },
+  "auth": {
+    "login_title": "Coach Sign In",
+    "login_subtitle": "Dashboard access for coaches & admins only",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign In",
+    "submitting": "Signing in...",
+    "error_invalid": "Invalid email or password",
+    "error_not_staff": "This account has no coach permission",
+    "logout": "Sign Out",
+    "guard_checking": "Verifying identity...",
+    "guard_denied_title": "Coach Access Required",
+    "guard_denied_desc": "This page is restricted to coaches and admins. Please sign in first.",
+    "guard_login_button": "Go to Sign In",
+    "staff_badge": "Signed in as coach"
   }
 }

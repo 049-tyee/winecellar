@@ -153,9 +153,15 @@
     "tests": {
       "start": "开始测试",
       "retry": "重新测试",
-      "mouse_control": { "hint": "让准星始终保持在移动的红色目标内，持续 20 秒" },
-      "left_precision": { "hint": "目标出现后，快速向左甩动并点击目标，共 8 次" },
-      "right_precision": { "hint": "目标出现后，快速向右甩动并点击目标，共 8 次" },
+      "mouse_control": {
+        "hint": "让准星始终保持在移动的红色目标内，持续 20 秒"
+      },
+      "left_precision": {
+        "hint": "目标出现后，快速向左甩动并点击目标，共 8 次"
+      },
+      "right_precision": {
+        "hint": "目标出现后，快速向右甩动并点击目标，共 8 次"
+      },
       "reaction": {
         "hint": "方块变为金色时立即点击，共 5 次",
         "tap_start": "点击开始",
@@ -210,22 +216,58 @@
     },
     "teams_title": "战队履历",
     "teams": {
-      "team1": { "name": "Nova Esports 青训队", "role": "主教练 · 战术体系搭建", "achievement": "青训联赛亚军" },
-      "team2": { "name": "Rising Stars", "role": "战术教练 · Demo 复盘体系", "achievement": "区域预选赛冠军" },
-      "team3": { "name": "个人选手训练营", "role": "个人教练 · 天赋测评体系", "achievement": "12 名选手进入职业青训" }
+      "team1": {
+        "name": "Nova Esports 青训队",
+        "role": "主教练 · 战术体系搭建",
+        "achievement": "青训联赛亚军"
+      },
+      "team2": {
+        "name": "Rising Stars",
+        "role": "战术教练 · Demo 复盘体系",
+        "achievement": "区域预选赛冠军"
+      },
+      "team3": {
+        "name": "个人选手训练营",
+        "role": "个人教练 · 天赋测评体系",
+        "achievement": "12 名选手进入职业青训"
+      }
     },
     "players_title": "选手星榜",
     "players": {
-      "p1": { "name": "PlayerOne", "note": "步枪手 · 训练 8 个月进入职业青训" },
-      "p2": { "name": "Shadow", "note": "狙击手 · AWP 命中率提升 18%" },
-      "p3": { "name": "Flash", "note": "突破手 · 首杀成功率提升 22%" },
-      "p4": { "name": "Anchor", "note": "辅助位 · KAST 提升 9%" }
+      "p1": {
+        "name": "PlayerOne",
+        "note": "步枪手 · 训练 8 个月进入职业青训"
+      },
+      "p2": {
+        "name": "Shadow",
+        "note": "狙击手 · AWP 命中率提升 18%"
+      },
+      "p3": {
+        "name": "Flash",
+        "note": "突破手 · 首杀成功率提升 22%"
+      },
+      "p4": {
+        "name": "Anchor",
+        "note": "辅助位 · KAST 提升 9%"
+      }
     },
     "endorsements_title": "合作背书",
     "endorsements": {
-      "e1": { "quote": "教练对战术细节拆解得非常透彻，队伍的中期决策水平提升了一个档次。", "author": "K.", "title": "战队队长" },
-      "e2": { "quote": "天赋测评让我第一次看清自己的短板，三个月的专项训练后 Rating 提升了 0.2。", "author": "M.", "title": "青训选手" },
-      "e3": { "quote": "复盘不只是找问题，更给出了可以立刻执行的训练清单。", "author": "Z.", "title": "个人学员" }
+      "e1": {
+        "quote": "教练对战术细节拆解得非常透彻，队伍的中期决策水平提升了一个档次。",
+        "author": "K.",
+        "title": "战队队长"
+      },
+      "e2": {
+        "quote": "天赋测评让我第一次看清自己的短板，三个月的专项训练后 Rating 提升了 0.2。",
+        "author": "M.",
+        "title": "青训选手"
+      },
+      "e3": {
+        "quote": "复盘不只是找问题，更给出了可以立刻执行的训练清单。",
+        "author": "Z.",
+        "title": "个人学员"
+      }
     },
     "cta_title": "想让自己的名字出现在这里？",
     "cta_desc": "预约一次 1对1 Coaching 或先做免费天赋测评，开始你的系统性提升。",
@@ -266,7 +308,15 @@
     "schedule_title": "日程管理",
     "schedule_hint": "点击时段切换开放 / 关闭；已被预约的时段不可取消。",
     "this_week": "本周",
-    "weekdays": { "mon": "周一", "tue": "周二", "wed": "周三", "thu": "周四", "fri": "周五", "sat": "周六", "sun": "周日" },
+    "weekdays": {
+      "mon": "周一",
+      "tue": "周二",
+      "wed": "周三",
+      "thu": "周四",
+      "fri": "周五",
+      "sat": "周六",
+      "sun": "周日"
+    },
     "slot_open": "开放",
     "slot_booked": "已约",
     "bookings_title": "预约管理",
@@ -316,7 +366,8 @@
     "assessment": "天赋测评",
     "about": "关于酒窖",
     "contact_title": "联系方式",
-    "wechat": "微信"
+    "wechat": "微信",
+    "staff_login": "教练入口"
   },
   "common": {
     "login": "登录",
@@ -327,5 +378,21 @@
     "confirm": "确认",
     "loading": "加载中...",
     "coming_soon": "敬请期待"
+  },
+  "auth": {
+    "login_title": "教练登录",
+    "login_subtitle": "仅限教练与管理员进入后台",
+    "email": "邮箱",
+    "password": "密码",
+    "submit": "登录",
+    "submitting": "登录中...",
+    "error_invalid": "邮箱或密码错误",
+    "error_not_staff": "该账号没有教练权限",
+    "logout": "退出登录",
+    "guard_checking": "正在验证身份...",
+    "guard_denied_title": "需要教练权限",
+    "guard_denied_desc": "此页面仅限教练与管理员访问，请先登录。",
+    "guard_login_button": "前往登录",
+    "staff_badge": "已登录教练账号"
   }
 }

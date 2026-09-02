@@ -35,6 +35,9 @@ export default function Footer() {
       </div>
       <div className="border-t border-[#B8860B]/10 py-6 text-center text-neutral-600">
         <p>© 2026 酒窖 WineCellar. All rights reserved.</p>
+        <Link href={`/${locale}/login`} className="inline-block mt-2 text-neutral-700 hover:text-[#B8860B] transition-colors">
+          {t('staff_login')}
+        </Link>
       </div>
     </footer>
   );
