@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BookingForm from '@/components/booking/BookingForm';
+import SectionHeading from '@/components/SectionHeading';
 import { getTranslations } from 'next-intl/server';
 
 export default async function BookingPage({ params: { locale } }: { params: { locale: string } }) {
@@ -9,10 +10,9 @@ export default async function BookingPage({ params: { locale } }: { params: { lo
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-black text-white pt-24 pb-24 px-4">
-        <div className="text-center space-y-3 mb-14">
-          <h1 className="text-4xl md:text-5xl font-bold">{t('title')}</h1>
-          <p className="text-neutral-400">{t('subtitle')}</p>
+      <main className="min-h-screen bg-black text-white pt-28 pb-24 px-4">
+        <div className="max-w-6xl mx-auto mb-16">
+          <SectionHeading index="Booking / 03" title={t('title')} en="BOOK A SESSION" desc={t('subtitle')} />
         </div>
         <BookingForm />
       </main>

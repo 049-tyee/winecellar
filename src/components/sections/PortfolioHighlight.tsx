@@ -14,9 +14,10 @@ export default function PortfolioHighlight() {
   return (
     <section className="py-24 bg-neutral-950 border-y border-[#B8860B]/10">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('title')}</h2>
-          <p className="text-neutral-400">{t('subtitle')}</p>
+        <div className="mb-16">
+          <p className="eyebrow mb-4">Portfolio / 02</p>
+          <h2 className="display-xl text-white mb-4">{t('title')}</h2>
+          <p className="text-neutral-400 max-w-xl">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

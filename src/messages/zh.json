@@ -33,6 +33,20 @@
     "view_detail": "查看详情",
     "view_all": "查看全部服务",
     "from": "起",
+    "bottom_cta": "选择服务，开始预约",
+    "builder": {
+      "title": "实时报价",
+      "desc": "选服务、定数量，报价单实时生成。所见即所得，无隐藏费用。",
+      "step1": "选择服务",
+      "step2_tier": "选择等级",
+      "step2_qty": "数量",
+      "quote": "报价单 Quote",
+      "total": "合计",
+      "deposit": "定金（开工）",
+      "balance": "尾款（交付）",
+      "deposit_note": "半半模式：定金锁定档期，服务完成后补齐尾款。",
+      "empty": "先在左侧选择一项服务"
+    },
     "calculator": {
       "title": "报价计算器",
       "select_service": "选择服务",
@@ -92,7 +106,12 @@
       "status": "敬请期待",
       "notify": "订阅上线通知",
       "email_placeholder": "输入你的邮箱",
-      "subscribed": "已订阅，上线后第一时间通知你"
+      "subscribed": "已订阅，上线后第一时间通知你",
+      "eyebrow": "Membership / 会员体系",
+      "perk_accelerated": "加速通道 —— 会员订单优先排期",
+      "perk_discount": "专属折扣 —— 全线服务会员价",
+      "perk_content": "持续输出 —— 战术拆解与训练方法定期更新",
+      "perk_review": "每周复盘 —— 每周一次免费集体复盘"
     }
   },
   "booking": {
@@ -241,7 +260,9 @@
   },
   "admin": {
     "title": "教练管理后台",
-    "subtitle": "演示模式 · 数据保存在本机浏览器",
+    "subtitle": "数据实时同步云端 Supabase",
+    "loading": "加载中...",
+    "offline_hint": "当前为离线模式",
     "schedule_title": "日程管理",
     "schedule_hint": "点击时段切换开放 / 关闭；已被预约的时段不可取消。",
     "this_week": "本周",

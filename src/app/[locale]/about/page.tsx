@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AboutContent from '@/components/about/AboutContent';
+import SectionHeading from '@/components/SectionHeading';
 import { getTranslations } from 'next-intl/server';
 
 export default async function AboutPage({ params: { locale } }: { params: { locale: string } }) {
@@ -9,10 +10,9 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-black text-white pt-24 pb-24 px-4">
-        <div className="text-center space-y-3 mb-14">
-          <h1 className="text-4xl md:text-5xl font-bold">{t('title')}</h1>
-          <p className="text-neutral-400">{t('subtitle')}</p>
+      <main className="min-h-screen bg-black text-white pt-28 pb-24 px-4">
+        <div className="mb-16 max-w-4xl mx-auto">
+          <SectionHeading index="About / 05" title={t('title')} en="THE COACH" desc={t('subtitle')} />
         </div>
         <AboutContent />
       </main>

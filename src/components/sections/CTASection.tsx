@@ -17,10 +17,10 @@ export default function CTASection() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2 className="display-xl text-white mb-8">
           {th('title')}
         </h2>
-        <p className="text-lg text-neutral-400 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
           {th('desc')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

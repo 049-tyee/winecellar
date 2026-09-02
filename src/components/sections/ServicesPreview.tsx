@@ -22,9 +22,10 @@ export default function ServicesPreview() {
   return (
     <section className="py-24 bg-neutral-950">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{ts('title')}</h2>
-          <p className="text-neutral-400">{ts('subtitle')}</p>
+        <div className="mb-16">
+          <p className="eyebrow mb-4">Services / 01</p>
+          <h2 className="display-xl text-white mb-4">{ts('title')}</h2>
+          <p className="text-neutral-400 max-w-xl">{ts('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -42,15 +42,18 @@ export default function PortfolioContent() {
       </section>
 
       {/* 战队履历 */}
-      <section className="mb-20">
-        <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-          <Trophy className="w-6 h-6 text-[#B8860B]" /> {t('teams_title')}
-        </h2>
+      <section className="mb-24">
+        <div className="mb-10">
+          <p className="eyebrow mb-3">01 / Teams</p>
+          <h2 className="text-3xl md:text-5xl font-bold flex items-center gap-4">
+            <Trophy className="w-8 h-8 text-[#B8860B]" /> {t('teams_title')}
+          </h2>
+        </div>
         <div className="space-y-4">
           {TEAMS.map((team) => (
             <div
               key={team.key}
-              className="border border-neutral-800 rounded-lg p-6 hover:border-[#B8860B]/40 transition-colors flex flex-col md:flex-row md:items-center gap-4"
+              className="border border-neutral-800 rounded-lg p-7 transition-all duration-300 hover:border-[#B8860B]/50 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#B8860B]/5 flex flex-col md:flex-row md:items-center gap-4"
             >
               <div className="md:w-32 text-sm text-neutral-500 shrink-0">{team.period}</div>
               <div className="flex-1">
@@ -64,13 +67,16 @@ export default function PortfolioContent() {
       </section>
 
       {/* 选手星榜 */}
-      <section className="mb-20">
-        <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-          <Star className="w-6 h-6 text-[#B8860B]" /> {t('players_title')}
-        </h2>
+      <section className="mb-24">
+        <div className="mb-10">
+          <p className="eyebrow mb-3">02 / Players</p>
+          <h2 className="text-3xl md:text-5xl font-bold flex items-center gap-4">
+            <Star className="w-8 h-8 text-[#B8860B]" /> {t('players_title')}
+          </h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {PLAYERS.map((p) => (
-            <div key={p.key} className="border border-neutral-800 rounded-lg p-6 bg-neutral-950/50 flex items-center gap-5">
+            <div key={p.key} className="border border-neutral-800 rounded-lg p-6 bg-neutral-950/50 flex items-center gap-5 transition-all duration-300 hover:border-[#8B0000]/60 hover:-translate-y-0.5">
               <div className="w-12 h-12 rounded-full bg-[#8B0000]/20 border border-[#8B0000]/40 flex items-center justify-center text-[#B8860B] font-bold shrink-0">
                 {t(`players.${p.key}.name`).charAt(0)}
               </div>
@@ -88,10 +94,13 @@ export default function PortfolioContent() {
       </section>
 
       {/* 合作背书 */}
-      <section className="mb-20">
-        <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-          <Quote className="w-6 h-6 text-[#B8860B]" /> {t('endorsements_title')}
-        </h2>
+      <section className="mb-24">
+        <div className="mb-10">
+          <p className="eyebrow mb-3">03 / Endorsements</p>
+          <h2 className="text-3xl md:text-5xl font-bold flex items-center gap-4">
+            <Quote className="w-8 h-8 text-[#B8860B]" /> {t('endorsements_title')}
+          </h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[1, 2, 3].map((i) => (
             <blockquote key={i} className="border border-neutral-800 rounded-lg p-6 bg-neutral-950/50">

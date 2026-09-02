@@ -9,6 +9,7 @@ import ReactionTest from './ReactionTest';
 import ErgonomicsForm from './ErgonomicsForm';
 import Report from './Report';
 import { addAssessment, getAssessments } from '@/lib/storage';
+import { saveAssessmentRemote } from '@/lib/db';
 
 type Step = 'intro' | 'mouse' | 'left' | 'right' | 'reaction' | 'ergo' | 'report';
 const STEPS: Step[] = ['mouse', 'left', 'right', 'reaction', 'ergo'];
@@ -33,6 +34,7 @@ export default function AssessmentFlow() {
     setScores(updated);
     if (next === 'report') {
       addAssessment(updated);
+      saveAssessmentRemote(updated).catch(() => {}); // 云端失败不影响本地报告
       setHistory(getAssessments());
     }
     setStep(next);

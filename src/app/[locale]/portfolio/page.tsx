@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PortfolioContent from '@/components/portfolio/PortfolioContent';
+import SectionHeading from '@/components/SectionHeading';
 import { getTranslations } from 'next-intl/server';
 
 export default async function PortfolioPage({ params: { locale } }: { params: { locale: string } }) {
@@ -9,11 +10,10 @@ export default async function PortfolioPage({ params: { locale } }: { params: { 
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-black text-white pt-24 pb-24 px-4">
+      <main className="min-h-screen bg-black text-white pt-28 pb-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-3 mb-14">
-            <h1 className="text-4xl md:text-5xl font-bold">{t('title')}</h1>
-            <p className="text-neutral-400">{t('subtitle')}</p>
+          <div className="mb-16">
+            <SectionHeading index="Portfolio / 02" title={t('title')} en="TRACK RECORD" desc={t('subtitle')} />
           </div>
           <PortfolioContent />
         </div>

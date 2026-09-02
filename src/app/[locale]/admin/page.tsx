@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScheduleManager from '@/components/admin/ScheduleManager';
 import BookingManager from '@/components/admin/BookingManager';
+import SectionHeading from '@/components/SectionHeading';
 import { getTranslations } from 'next-intl/server';
 
 export default async function AdminPage({ params: { locale } }: { params: { locale: string } }) {
@@ -10,12 +11,9 @@ export default async function AdminPage({ params: { locale } }: { params: { loca
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-black text-white pt-24 pb-24 px-4">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="space-y-3">
-            <h1 className="text-4xl font-bold">{t('title')}</h1>
-            <p className="text-neutral-400 text-sm">{t('subtitle')}</p>
-          </div>
+      <main className="min-h-screen bg-black text-white pt-28 pb-24 px-4">
+        <div className="max-w-6xl mx-auto space-y-20">
+          <SectionHeading index="Admin" title={t('title')} en="COACH DASHBOARD" desc={t('subtitle')} />
           <ScheduleManager />
           <BookingManager />
         </div>

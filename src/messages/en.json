@@ -33,6 +33,20 @@
     "view_detail": "Details",
     "view_all": "All Services",
     "from": "from",
+    "bottom_cta": "Pick a service and book now",
+    "builder": {
+      "title": "Live Quote",
+      "desc": "Pick a service, set the quantity — your quote is generated in real time. No hidden fees.",
+      "step1": "Select a Service",
+      "step2_tier": "Select a Tier",
+      "step2_qty": "Quantity",
+      "quote": "Quote",
+      "total": "Total",
+      "deposit": "Deposit (start)",
+      "balance": "Balance (delivery)",
+      "deposit_note": "50/50: deposit locks your slot; balance due on completion.",
+      "empty": "Select a service on the left first"
+    },
     "calculator": {
       "title": "Price Calculator",
       "select_service": "Select Service",
@@ -92,7 +106,12 @@
       "status": "Coming Soon",
       "notify": "Notify me when available",
       "email_placeholder": "Enter your email",
-      "subscribed": "Subscribed — you'll be the first to know"
+      "subscribed": "Subscribed — you'll be the first to know",
+      "eyebrow": "Membership",
+      "perk_accelerated": "Fast lane — member orders get priority scheduling",
+      "perk_discount": "Member pricing — discounts across all services",
+      "perk_content": "Ongoing content — tactical breakdowns and training methods",
+      "perk_review": "Weekly review — free group review session every week"
     }
   },
   "booking": {
@@ -241,7 +260,9 @@
   },
   "admin": {
     "title": "Coach Dashboard",
-    "subtitle": "Demo mode · data stored locally in this browser",
+    "subtitle": "Data synced to Supabase in real time",
+    "loading": "Loading...",
+    "offline_hint": "offline mode",
     "schedule_title": "Schedule Management",
     "schedule_hint": "Click a slot to toggle open/closed. Booked slots cannot be cancelled.",
     "this_week": "This Week",

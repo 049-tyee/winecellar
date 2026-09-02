@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Mail, MessageSquare, Send, Check } from 'lucide-react';
 import { addInquiry } from '@/lib/storage';
+import { sendInquiryRemote } from '@/lib/db';
 
 export default function AboutContent() {
   const t = useTranslations('about');
@@ -12,10 +13,15 @@ export default function AboutContent() {
   const [message, setMessage] = useState('');
   const [sent, setSent] = useState(false);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !contact.trim() || !message.trim()) return;
-    addInquiry({ name: name.trim(), contact: contact.trim(), message: message.trim() });
+    const payload = { name: name.trim(), contact: contact.trim(), message: message.trim() };
+    try {
+      await sendInquiryRemote(payload);
+    } catch {
+      addInquiry(payload); // 云端失败时本地兜底
+    }
     setSent(true);
   };
 
