@@ -1,13 +1,15 @@
 'use client';
 
 import { Users, Trophy, Target, Timer } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function StatsHighlight() {
+  const t = useTranslations('home.stats');
   const stats = [
-    { icon: Users, value: '50+', label: '指导选手' },
-    { icon: Trophy, value: '10+', label: '合作战队' },
-    { icon: Target, value: '200+', label: '测评完成' },
-    { icon: Timer, value: '1000+', label: '教学小时' },
+    { icon: Users, value: '50+', label: t('players') },
+    { icon: Trophy, value: '10+', label: t('teams') },
+    { icon: Target, value: '200+', label: t('assessments') },
+    { icon: Timer, value: '1000+', label: t('hours') },
   ];
 
   return (

@@ -1,9 +1,11 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const locale = useLocale();
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
@@ -28,18 +30,18 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <a
-            href="#booking"
+          <Link
+            href={`/${locale}/booking`}
             className="px-10 py-4 bg-[#8B0000] hover:bg-[#A52A2A] text-white font-medium rounded transition-all duration-300 hover:shadow-lg hover:shadow-[#8B0000]/20"
           >
             {t('cta_booking')}
-          </a>
-          <a
-            href="#assessment"
+          </Link>
+          <Link
+            href={`/${locale}/assessment`}
             className="px-10 py-4 border border-[#B8860B] text-[#B8860B] hover:bg-[#B8860B]/10 font-medium rounded transition-all duration-300"
           >
             {t('cta_assessment')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

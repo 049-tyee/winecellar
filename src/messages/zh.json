@@ -28,13 +28,19 @@
     "unit_hour": "小时",
     "unit_map": "图",
     "unit_match": "场",
+    "unit_tier": "次",
+    "cta_booking": "立即预约",
+    "view_detail": "查看详情",
+    "view_all": "查看全部服务",
+    "from": "起",
     "calculator": {
       "title": "报价计算器",
       "select_service": "选择服务",
       "quantity": "数量",
       "tier": "等级",
       "total": "合计",
-      "currency": "¥"
+      "currency": "¥",
+      "note": "最终价格以教练确认为准；预约需支付 50% 定金锁定档期。"
     },
     "list": {
       "coaching_1on1": {
@@ -72,36 +78,73 @@
       "q2": "付款方式是什么？",
       "a2": "支持微信支付和支付宝。国际客户可使用 Stripe（即将上线）。",
       "q3": "可以退款吗？",
-      "a3": "方向确认版之前可全额退款。确认方向后定金用于已投入的创作时间。",
-      "q4": "修改次数有限制吗？",
-      "a4": "朝既定方向的修正不限次数。变更整体方向视为新方案，另行计费。"
+      "a3": "开课前 24 小时以上可全额退款；24 小时内取消将扣除 50% 定金。",
+      "q4": "天赋测评是免费的吗？",
+      "a4": "是的。天赋测评是免费前置环节，可无限次复测并形成成长曲线。",
+      "q5": "团队服务的人数限制？",
+      "a5": "团队提升与团队陪练按整队计费，不限队内人数；建议不超过 7 人同时参与。",
+      "q6": "课程可以改期吗？",
+      "a6": "已付款的档期可在开课前 12 小时免费改期一次，需与教练协商新时段。"
     },
     "membership": {
       "title": "酒窖会员",
       "subtitle": "随队学习整队打法",
       "status": "敬请期待",
-      "notify": "订阅上线通知"
+      "notify": "订阅上线通知",
+      "email_placeholder": "输入你的邮箱",
+      "subscribed": "已订阅，上线后第一时间通知你"
     }
   },
   "booking": {
     "title": "预约服务",
+    "subtitle": "提交需求，教练确认后付款锁定档期",
     "mode_a": "直接选时间",
     "mode_b": "提交需求",
     "form": {
       "service": "选择服务",
+      "quantity": "数量",
       "contact": "联系方式",
       "game_id": "游戏 ID",
       "wechat": "微信号",
       "description": "需求描述",
+      "description_placeholder": "例如：目前段位、想提升的方向、可训练的时间段……",
       "preferred_time": "期望时间",
+      "preferred_time_placeholder": "例如：周三晚上 8 点 / 周末下午均可",
+      "pick_slot": "选择开放时段",
+      "no_slots": "教练暂未开放可选时段，请使用「提交需求」模式预约。",
       "submit": "提交预约",
-      "success": "预约已提交，等待教练确认"
+      "success": "预约已提交，等待教练确认",
+      "order_no": "订单编号",
+      "deposit_hint": "金额合计 ¥{total}，确认后支付 50% 定金（¥{deposit}）即可锁定档期",
+      "payment_hint": "教练确认后将通过微信与你联系，发送微信 / 支付宝付款方式。",
+      "new_booking": "再预约一单",
+      "deposit_note": "提交后教练会尽快确认；付款完成后档期正式锁定。"
     }
   },
   "assessment": {
     "title": "天赋测评",
     "subtitle": "免费 · 可重复测试 · 追踪成长",
     "start": "开始测评",
+    "intro": {
+      "tip1": "建议使用游戏同款鼠标与 DPI 设置，全程约 5 分钟",
+      "tip2": "请保持日常坐姿与握姿，结果才能真实反映你的状态",
+      "tip3": "测评完成后自动生成雷达图报告，可长期复测对比成长曲线",
+      "free": "免费前置环节 · 无需注册 · 结果仅保存在你的浏览器中"
+    },
+    "tests": {
+      "start": "开始测试",
+      "retry": "重新测试",
+      "mouse_control": { "hint": "让准星始终保持在移动的红色目标内，持续 20 秒" },
+      "left_precision": { "hint": "目标出现后，快速向左甩动并点击目标，共 8 次" },
+      "right_precision": { "hint": "目标出现后，快速向右甩动并点击目标，共 8 次" },
+      "reaction": {
+        "hint": "方块变为金色时立即点击，共 5 次",
+        "tap_start": "点击开始",
+        "waiting": "等待变色……",
+        "click_now": "点击！",
+        "too_early": "太早了！"
+      }
+    },
     "dimensions": {
       "mouse_control": "鼠标掌控度",
       "left_precision": "向左定位精准度",
@@ -109,12 +152,150 @@
       "ergonomics": "鼠标受力与舒适度",
       "reaction": "反应速度"
     },
+    "ergonomics": {
+      "dpi": "鼠标 DPI",
+      "sens": "游戏内灵敏度",
+      "edpi_hint": "主流职业选手区间约 600-1200",
+      "grip": "握姿",
+      "grip_palm": "趴握",
+      "grip_claw": "抓握",
+      "grip_fingertip": "指握",
+      "fatigue": "长时间游戏后手部疲劳感（1 无 - 5 严重）",
+      "comfort": "当前握持舒适度（1 差 - 5 极佳）",
+      "submit": "完成测评"
+    },
     "report": {
       "title": "测评报告",
+      "overall": "综合天赋指数",
       "percentile": "超过 {percent}% 的测试者",
+      "reaction_ms": "平均反应速度 {ms} ms",
       "history": "测评历史",
-      "suggestion": "训练建议"
+      "suggestion": "训练建议",
+      "retest": "重新测评",
+      "analysis": "你的最强项是「{strongest}」，最弱项是「{weakest}」。建议保持强项手感的同时，优先针对弱项进行专项训练。",
+      "advice_mouse_control": "建议每天进行 15 分钟追踪类 Aim 训练（如平滑跟枪练习），重点提升准星稳定性与急停精度。",
+      "advice_left_precision": "建议增加向左大角度转身定位练习，可配合预瞄点位训练强化左侧肌肉记忆。",
+      "advice_right_precision": "建议增加向右大角度转身定位练习，可配合预瞄点位训练强化右侧肌肉记忆。",
+      "advice_ergonomics": "建议调整 DPI 与灵敏度至主流区间，训练间隙做手部拉伸；如长期疲劳可考虑更换鼠标或调整握姿。",
+      "advice_reaction": "建议通过预瞄与站位减少纯反应需求，同时进行专项反应训练（如 Aim Lab Reaction 模式）。"
     }
+  },
+  "portfolio": {
+    "title": "合作履历",
+    "subtitle": "与战队和选手共同成长的轨迹",
+    "stats": {
+      "players": "指导选手",
+      "trophies": "赛事奖杯",
+      "hours": "执教时长",
+      "satisfaction": "学员好评率"
+    },
+    "teams_title": "战队履历",
+    "teams": {
+      "team1": { "name": "Nova Esports 青训队", "role": "主教练 · 战术体系搭建", "achievement": "青训联赛亚军" },
+      "team2": { "name": "Rising Stars", "role": "战术教练 · Demo 复盘体系", "achievement": "区域预选赛冠军" },
+      "team3": { "name": "个人选手训练营", "role": "个人教练 · 天赋测评体系", "achievement": "12 名选手进入职业青训" }
+    },
+    "players_title": "选手星榜",
+    "players": {
+      "p1": { "name": "PlayerOne", "note": "步枪手 · 训练 8 个月进入职业青训" },
+      "p2": { "name": "Shadow", "note": "狙击手 · AWP 命中率提升 18%" },
+      "p3": { "name": "Flash", "note": "突破手 · 首杀成功率提升 22%" },
+      "p4": { "name": "Anchor", "note": "辅助位 · KAST 提升 9%" }
+    },
+    "endorsements_title": "合作背书",
+    "endorsements": {
+      "e1": { "quote": "教练对战术细节拆解得非常透彻，队伍的中期决策水平提升了一个档次。", "author": "K.", "title": "战队队长" },
+      "e2": { "quote": "天赋测评让我第一次看清自己的短板，三个月的专项训练后 Rating 提升了 0.2。", "author": "M.", "title": "青训选手" },
+      "e3": { "quote": "复盘不只是找问题，更给出了可以立刻执行的训练清单。", "author": "Z.", "title": "个人学员" }
+    },
+    "cta_title": "想让自己的名字出现在这里？",
+    "cta_desc": "预约一次 1对1 Coaching 或先做免费天赋测评，开始你的系统性提升。",
+    "cta_button": "立即预约"
+  },
+  "about": {
+    "title": "关于酒窖",
+    "subtitle": "认识你的教练",
+    "coach": {
+      "name": "酒窖教练",
+      "title": "专业 CS2 电子竞技教练员",
+      "bio1": "深耕 CS 系列十余年，从选手到教练，执教过多支青训与半职业战队，擅长将复杂的战术体系拆解为可执行的个人训练方案。",
+      "bio2": "坚信「天赋可以被测量，成长可以被追踪」，因此建立了自己的天赋测评体系与选手数据追踪方法，帮助每一位学员看清自己的位置与下一步方向。",
+      "point1": "10+ 年 CS 系列经验，5 年执教经历",
+      "point2": "累计指导 40+ 名选手，12 人进入职业青训体系",
+      "point3": "原创天赋测评体系，覆盖定位、掌控、反应与舒适度",
+      "point4": "中英双语教学，可服务海外学员"
+    },
+    "contact": {
+      "title": "联系方式",
+      "wechat": "微信",
+      "email": "邮箱"
+    },
+    "inquiry": {
+      "title": "合作洽谈",
+      "name": "你的称呼",
+      "contact": "联系方式（微信 / 邮箱）",
+      "message": "想聊什么？（战队合作 / 训练营 / 其他）",
+      "submit": "发送",
+      "success": "已收到你的消息，会尽快回复。"
+    }
+  },
+  "admin": {
+    "title": "教练管理后台",
+    "subtitle": "演示模式 · 数据保存在本机浏览器",
+    "schedule_title": "日程管理",
+    "schedule_hint": "点击时段切换开放 / 关闭；已被预约的时段不可取消。",
+    "this_week": "本周",
+    "weekdays": { "mon": "周一", "tue": "周二", "wed": "周三", "thu": "周四", "fri": "周五", "sat": "周六", "sun": "周日" },
+    "slot_open": "开放",
+    "slot_booked": "已约",
+    "bookings_title": "预约管理",
+    "bookings_empty": "暂无预约。用户在前台提交预约后会显示在这里。",
+    "col_player": "选手",
+    "col_wechat": "微信",
+    "col_time": "期望时间",
+    "status": {
+      "PENDING": "待确认",
+      "CONFIRMED": "已确认",
+      "PAID": "已付款",
+      "COMPLETED": "已完成",
+      "CANCELLED": "已取消"
+    },
+    "action_confirm": "确认预约",
+    "action_reject": "拒绝",
+    "action_paid": "标记已付款",
+    "action_complete": "标记完成"
+  },
+  "home": {
+    "stats": {
+      "players": "指导选手",
+      "teams": "合作战队",
+      "assessments": "测评完成",
+      "hours": "教学小时"
+    },
+    "portfolio": {
+      "title": "合作履历",
+      "subtitle": "与优秀选手和战队共同成长",
+      "h1_title": "Major 资格赛",
+      "h1_desc": "带领战队闯入 Regional Major Rankings 前 8",
+      "h2_title": "选手输送",
+      "h2_desc": "3 名学员进入职业战队青训体系",
+      "h3_title": "数据提升",
+      "h3_desc": "学员平均 Rating 提升 0.15+"
+    },
+    "cta": {
+      "title": "准备好提升你的 CS2 水平了吗？",
+      "desc": "从免费天赋测评开始，了解你的优势与短板，制定专属训练计划。"
+    }
+  },
+  "footer": {
+    "tagline": "专业 CS2 电竞教练 · 天赋可测量，成长可追踪",
+    "nav_title": "快速导航",
+    "services": "服务与定价",
+    "booking": "预约服务",
+    "assessment": "天赋测评",
+    "about": "关于酒窖",
+    "contact_title": "联系方式",
+    "wechat": "微信"
   },
   "common": {
     "login": "登录",

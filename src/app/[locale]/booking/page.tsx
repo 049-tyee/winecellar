@@ -1,15 +1,22 @@
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import BookingForm from '@/components/booking/BookingForm';
+import { getTranslations } from 'next-intl/server';
 
-export default function BookingPage() {
+export default async function BookingPage({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'booking' });
+
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-black text-white pt-24 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">预约服务</h1>
-          <p className="text-neutral-400">页面开发中...</p>
+      <main className="min-h-screen bg-black text-white pt-24 pb-24 px-4">
+        <div className="text-center space-y-3 mb-14">
+          <h1 className="text-4xl md:text-5xl font-bold">{t('title')}</h1>
+          <p className="text-neutral-400">{t('subtitle')}</p>
         </div>
+        <BookingForm />
       </main>
+      <Footer />
     </>
   );
 }

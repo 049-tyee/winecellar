@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTASection() {
   const t = useTranslations('hero');
+  const th = useTranslations('home.cta');
   const locale = useLocale();
 
   return (
@@ -17,10 +18,10 @@ export default function CTASection() {
 
       <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          准备好提升你的 CS2 水平了吗？
+          {th('title')}
         </h2>
         <p className="text-lg text-neutral-400 mb-8 max-w-2xl mx-auto">
-          从免费天赋测评开始，了解你的优势与短板，制定专属训练计划。
+          {th('desc')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

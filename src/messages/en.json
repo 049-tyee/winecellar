@@ -28,13 +28,19 @@
     "unit_hour": "hour",
     "unit_map": "map",
     "unit_match": "match",
+    "unit_tier": "session",
+    "cta_booking": "Book Now",
+    "view_detail": "Details",
+    "view_all": "All Services",
+    "from": "from",
     "calculator": {
       "title": "Price Calculator",
       "select_service": "Select Service",
       "quantity": "Quantity",
       "tier": "Tier",
       "total": "Total",
-      "currency": "¥"
+      "currency": "¥",
+      "note": "Final price is confirmed by the coach. A 50% deposit is required to lock your slot."
     },
     "list": {
       "coaching_1on1": {
@@ -72,36 +78,73 @@
       "q2": "What payment methods are accepted?",
       "a2": "WeChat Pay and Alipay. Stripe for international clients (coming soon).",
       "q3": "Can I get a refund?",
-      "a3": "Full refund before direction confirmation. After confirmation, deposit covers time already invested.",
-      "q4": "Are there limits on revisions?",
-      "a4": "Unlimited revisions within the agreed direction. Major direction changes are treated as new projects."
+      "a3": "Full refund if cancelled more than 24 hours before the session; within 24 hours, 50% of the deposit is retained.",
+      "q4": "Is the talent assessment free?",
+      "a4": "Yes. The assessment is a free pre-service step. You can retest unlimited times and track your growth curve.",
+      "q5": "Is there a team size limit?",
+      "a5": "Team boost and sparring are priced per team with no player cap; we recommend at most 7 active participants.",
+      "q6": "Can I reschedule a session?",
+      "a6": "Paid slots can be rescheduled once for free up to 12 hours before the session, subject to coach availability."
     },
     "membership": {
       "title": "WineCellar Membership",
       "subtitle": "Team-wide learning experience",
       "status": "Coming Soon",
-      "notify": "Notify me when available"
+      "notify": "Notify me when available",
+      "email_placeholder": "Enter your email",
+      "subscribed": "Subscribed — you'll be the first to know"
     }
   },
   "booking": {
     "title": "Book a Service",
+    "subtitle": "Submit your request, pay the deposit after coach confirmation",
     "mode_a": "Pick a Time",
     "mode_b": "Submit Request",
     "form": {
       "service": "Select Service",
+      "quantity": "Quantity",
       "contact": "Contact Info",
       "game_id": "Game ID",
       "wechat": "WeChat ID",
       "description": "Requirements",
+      "description_placeholder": "e.g. current rank, what you want to improve, available time slots...",
       "preferred_time": "Preferred Time",
+      "preferred_time_placeholder": "e.g. Wednesday 8 PM / weekend afternoons",
+      "pick_slot": "Pick an open slot",
+      "no_slots": "No open slots yet. Please use \"Submit Request\" mode instead.",
       "submit": "Submit Booking",
-      "success": "Booking submitted, awaiting coach confirmation"
+      "success": "Booking submitted, awaiting coach confirmation",
+      "order_no": "Order No.",
+      "deposit_hint": "Total ¥{total}. A 50% deposit (¥{deposit}) locks your slot after confirmation.",
+      "payment_hint": "The coach will contact you on WeChat with WeChat Pay / Alipay payment details.",
+      "new_booking": "Book another session",
+      "deposit_note": "The coach will confirm shortly; the slot is locked once payment is complete."
     }
   },
   "assessment": {
     "title": "Talent Assessment",
     "subtitle": "Free · Retestable · Track Growth",
     "start": "Start Assessment",
+    "intro": {
+      "tip1": "Use your gaming mouse and in-game DPI settings — the full test takes about 5 minutes",
+      "tip2": "Keep your usual posture and grip so results reflect your real state",
+      "tip3": "A radar report is generated automatically; retest anytime to track your growth curve",
+      "free": "Free pre-service step · No signup · Results stay in your browser"
+    },
+    "tests": {
+      "start": "Start Test",
+      "retry": "Retry",
+      "mouse_control": { "hint": "Keep your crosshair inside the moving red target for 20 seconds" },
+      "left_precision": { "hint": "When a target appears, flick left and click it — 8 trials" },
+      "right_precision": { "hint": "When a target appears, flick right and click it — 8 trials" },
+      "reaction": {
+        "hint": "Click the moment the panel turns gold — 5 trials",
+        "tap_start": "Click to start",
+        "waiting": "Wait for gold...",
+        "click_now": "CLICK!",
+        "too_early": "Too early!"
+      }
+    },
     "dimensions": {
       "mouse_control": "Mouse Control",
       "left_precision": "Left Precision",
@@ -109,12 +152,150 @@
       "ergonomics": "Ergonomics & Comfort",
       "reaction": "Reaction Speed"
     },
+    "ergonomics": {
+      "dpi": "Mouse DPI",
+      "sens": "In-game Sensitivity",
+      "edpi_hint": "typical pro range ~600-1200",
+      "grip": "Grip Style",
+      "grip_palm": "Palm",
+      "grip_claw": "Claw",
+      "grip_fingertip": "Fingertip",
+      "fatigue": "Hand fatigue after long sessions (1 none - 5 severe)",
+      "comfort": "Current grip comfort (1 poor - 5 excellent)",
+      "submit": "Finish Assessment"
+    },
     "report": {
       "title": "Assessment Report",
+      "overall": "Overall Talent Index",
       "percentile": "Top {percent}% of test takers",
+      "reaction_ms": "Average reaction {ms} ms",
       "history": "Assessment History",
-      "suggestion": "Training Suggestions"
+      "suggestion": "Training Suggestions",
+      "retest": "Retest",
+      "analysis": "Your strongest dimension is \"{strongest}\" and your weakest is \"{weakest}\". Keep your strengths sharp while prioritizing targeted work on the weak area.",
+      "advice_mouse_control": "Do 15 minutes of tracking-based aim training daily (smooth tracking drills), focusing on crosshair stability and stop accuracy.",
+      "advice_left_precision": "Add wide-angle left-flick drills and pre-aim routines to build left-side muscle memory.",
+      "advice_right_precision": "Add wide-angle right-flick drills and pre-aim routines to build right-side muscle memory.",
+      "advice_ergonomics": "Tune DPI/sensitivity into the mainstream range, stretch your hands between sessions, and consider a mouse or grip change if fatigue persists.",
+      "advice_reaction": "Reduce reliance on raw reactions through pre-aiming and positioning, plus dedicated reaction drills (e.g. Aim Lab reaction modes)."
     }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "A track record of growing with teams and players",
+    "stats": {
+      "players": "Players Coached",
+      "trophies": "Trophies",
+      "hours": "Coaching Hours",
+      "satisfaction": "Satisfaction"
+    },
+    "teams_title": "Team History",
+    "teams": {
+      "team1": { "name": "Nova Esports Academy", "role": "Head Coach · Tactical system building", "achievement": "Academy League Runner-up" },
+      "team2": { "name": "Rising Stars", "role": "Tactical Coach · Demo review system", "achievement": "Regional Qualifier Champion" },
+      "team3": { "name": "Individual Player Camp", "role": "Personal Coach · Talent assessment system", "achievement": "12 players signed to pro academies" }
+    },
+    "players_title": "Star Players",
+    "players": {
+      "p1": { "name": "PlayerOne", "note": "Rifler · signed to a pro academy after 8 months" },
+      "p2": { "name": "Shadow", "note": "AWPer · AWP hit rate up 18%" },
+      "p3": { "name": "Flash", "note": "Entry fragger · opening duel success up 22%" },
+      "p4": { "name": "Anchor", "note": "Support · KAST up 9%" }
+    },
+    "endorsements_title": "Endorsements",
+    "endorsements": {
+      "e1": { "quote": "The coach dissects tactical details with real clarity — our mid-round decision-making jumped a level.", "author": "K.", "title": "Team Captain" },
+      "e2": { "quote": "The talent assessment showed me my weaknesses for the first time. Three months of targeted training later, my Rating is up 0.2.", "author": "M.", "title": "Academy Player" },
+      "e3": { "quote": "Reviews don't just find problems — they hand you a training list you can execute immediately.", "author": "Z.", "title": "Individual Student" }
+    },
+    "cta_title": "Want your name on this wall?",
+    "cta_desc": "Book a 1-on-1 session or take the free talent assessment to start your systematic improvement.",
+    "cta_button": "Book Now"
+  },
+  "about": {
+    "title": "About WineCellar",
+    "subtitle": "Meet your coach",
+    "coach": {
+      "name": "Coach WineCellar",
+      "title": "Professional CS2 Esports Coach",
+      "bio1": "Over a decade in the Counter-Strike franchise — from player to coach — leading academy and semi-pro teams, and specializing in breaking complex tactical systems down into executable individual training plans.",
+      "bio2": "A firm believer that talent can be measured and growth can be tracked, he built his own talent assessment system and player data tracking methodology to help every student see exactly where they stand and what comes next.",
+      "point1": "10+ years in the CS franchise, 5 years coaching",
+      "point2": "40+ players coached, 12 signed to pro academy systems",
+      "point3": "Original talent assessment covering precision, control, reaction and comfort",
+      "point4": "Bilingual coaching in Chinese and English"
+    },
+    "contact": {
+      "title": "Contact",
+      "wechat": "WeChat",
+      "email": "Email"
+    },
+    "inquiry": {
+      "title": "Business Inquiries",
+      "name": "Your name",
+      "contact": "Contact (WeChat / Email)",
+      "message": "What would you like to discuss? (team partnership / training camp / other)",
+      "submit": "Send",
+      "success": "Message received — I'll get back to you soon."
+    }
+  },
+  "admin": {
+    "title": "Coach Dashboard",
+    "subtitle": "Demo mode · data stored locally in this browser",
+    "schedule_title": "Schedule Management",
+    "schedule_hint": "Click a slot to toggle open/closed. Booked slots cannot be cancelled.",
+    "this_week": "This Week",
+    "weekdays": { "mon": "Mon", "tue": "Tue", "wed": "Wed", "thu": "Thu", "fri": "Fri", "sat": "Sat", "sun": "Sun" },
+    "slot_open": "Open",
+    "slot_booked": "Booked",
+    "bookings_title": "Bookings",
+    "bookings_empty": "No bookings yet. Submissions from the booking page will appear here.",
+    "col_player": "Player",
+    "col_wechat": "WeChat",
+    "col_time": "Preferred Time",
+    "status": {
+      "PENDING": "Pending",
+      "CONFIRMED": "Confirmed",
+      "PAID": "Paid",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled"
+    },
+    "action_confirm": "Confirm",
+    "action_reject": "Reject",
+    "action_paid": "Mark Paid",
+    "action_complete": "Mark Complete"
+  },
+  "home": {
+    "stats": {
+      "players": "Players Coached",
+      "teams": "Partner Teams",
+      "assessments": "Assessments Done",
+      "hours": "Coaching Hours"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "subtitle": "Growing with outstanding players and teams",
+      "h1_title": "Major Qualifier",
+      "h1_desc": "Led a team to top 8 in the Regional Major Rankings",
+      "h2_title": "Player Pipeline",
+      "h2_desc": "3 students signed into pro team academy systems",
+      "h3_title": "Measurable Growth",
+      "h3_desc": "Average student Rating improvement of 0.15+"
+    },
+    "cta": {
+      "title": "Ready to level up your CS2 game?",
+      "desc": "Start with the free talent assessment, discover your strengths and weaknesses, and get a personalized training plan."
+    }
+  },
+  "footer": {
+    "tagline": "Professional CS2 coaching · talent measurable, growth trackable",
+    "nav_title": "Quick Links",
+    "services": "Services",
+    "booking": "Booking",
+    "assessment": "Assessment",
+    "about": "About",
+    "contact_title": "Contact",
+    "wechat": "WeChat"
   },
   "common": {
     "login": "Login",

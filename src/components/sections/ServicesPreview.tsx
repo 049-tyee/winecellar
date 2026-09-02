@@ -7,23 +7,24 @@ import { User, Users, FileSearch, MonitorPlay, Swords, MapPin, ArrowRight } from
 
 export default function ServicesPreview() {
   const t = useTranslations('services.list');
+  const ts = useTranslations('services');
   const locale = useLocale();
 
   const services = [
-    { key: 'coaching_1on1', icon: User, price: 150, unit: 'services.unit_hour' },
-    { key: 'team_boost', icon: Users, price: 300, unit: 'services.unit_hour' },
-    { key: 'demo_review_personal', icon: FileSearch, price: 50, unit: 'services.unit_map' },
-    { key: 'demo_review_team', icon: MonitorPlay, price: 200, unit: 'services.unit_match' },
-    { key: 'team_sparring', icon: Swords, price: 100, unit: 'services.unit_hour' },
-    { key: 'position_tutorial', icon: MapPin, price: 100, unit: 'services.unit_hour', hasTiers: true },
+    { key: 'coaching_1on1', icon: User, price: 150, unitKey: 'unit_hour' },
+    { key: 'team_boost', icon: Users, price: 300, unitKey: 'unit_hour' },
+    { key: 'demo_review_personal', icon: FileSearch, price: 50, unitKey: 'unit_map' },
+    { key: 'demo_review_team', icon: MonitorPlay, price: 200, unitKey: 'unit_match' },
+    { key: 'team_sparring', icon: Swords, price: 100, unitKey: 'unit_hour' },
+    { key: 'position_tutorial', icon: MapPin, price: 100, unitKey: 'unit_hour', hasTiers: true },
   ];
 
   return (
     <section className="py-24 bg-neutral-950">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('services.title')}</h2>
-          <p className="text-neutral-400">{t('services.subtitle')}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{ts('title')}</h2>
+          <p className="text-neutral-400">{ts('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -39,21 +40,21 @@ export default function ServicesPreview() {
                   <span className="text-2xl font-bold text-white">
                     ¥{service.price}
                     <span className="text-sm font-normal text-neutral-500 ml-1">
-                      /{service.hasTiers ? '起' : t(service.unit as string)}
+                      /{service.hasTiers ? ts('from') : ts(service.unitKey)}
                     </span>
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  {t(`${service.key}.name` as string)}
+                  {t(`${service.key}.name`)}
                 </h3>
                 <p className="text-sm text-neutral-400 mb-4">
-                  {t(`${service.key}.desc` as string)}
+                  {t(`${service.key}.desc`)}
                 </p>
                 <Link
                   href={`/${locale}/services`}
                   className="inline-flex items-center text-sm text-[#B8860B] hover:text-[#DAA520] transition-colors"
                 >
-                  查看详情 <ArrowRight className="w-4 h-4 ml-1" />
+                  {ts('view_detail')} <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             );
@@ -65,7 +66,7 @@ export default function ServicesPreview() {
             href={`/${locale}/services`}
             className="inline-flex items-center px-8 py-3 bg-[#8B0000] hover:bg-[#A52A2A] text-white rounded transition-colors"
           >
-            查看全部服务 <ArrowRight className="w-4 h-4 ml-2" />
+            {ts('view_all')} <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
       </div>

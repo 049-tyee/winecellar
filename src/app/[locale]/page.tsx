@@ -4,6 +4,7 @@ import StatsHighlight from '@/components/sections/StatsHighlight';
 import ServicesPreview from '@/components/sections/ServicesPreview';
 import PortfolioHighlight from '@/components/sections/PortfolioHighlight';
 import CTASection from '@/components/sections/CTASection';
+import Footer from '@/components/Footer';
 import { locales } from '@/i18n';
 
 export function generateStaticParams() {
@@ -19,9 +20,7 @@ export default function HomePage() {
       <ServicesPreview />
       <PortfolioHighlight />
       <CTASection />
-      <footer className="py-8 bg-black border-t border-[#B8860B]/10 text-center text-neutral-600 text-sm">
-        <p>© 2026 酒窖 WineCellar. All rights reserved.</p>
-      </footer>
+      <Footer />
     </>
   );
 }
