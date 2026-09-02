@@ -1,0 +1,191 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  VISITOR
+  USER
+  PLAYER
+  COACH
+  ADMIN
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  PAID
+  COMPLETED
+  CANCELLED
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  password_hash String
+  role          UserRole  @default(USER)
+  display_name  String?
+  avatar_url    String?
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+
+  bookings      Booking[]
+  players       Player[]
+  assessments   TalentAssessment[]
+}
+
+model Service {
+  id              String   @id @default(uuid())
+  name_key        String
+  description_key String?
+  base_price      Int
+  unit            String
+  category        String
+  tier_levels     Json?
+  sort_order      Int      @default(0)
+  is_active       Boolean  @default(true)
+  created_at      DateTime @default(now())
+
+  bookings        Booking[]
+}
+
+model Booking {
+  id           String        @id @default(uuid())
+  user_id      String
+  service_id   String
+  tier_level   String?
+  quantity     Int           @default(1)
+  total_price  Int
+  status       BookingStatus @default(PENDING)
+  scheduled_at DateTime?
+  paid_at      DateTime?
+  notes        String?
+  contact_info Json?
+  created_at   DateTime      @default(now())
+  updated_at   DateTime      @updatedAt
+
+  user         User          @relation(fields: [user_id], references: [id])
+  service      Service       @relation(fields: [service_id], references: [id])
+}
+
+model CoachSchedule {
+  id           String   @id @default(uuid())
+  date         DateTime @db.Date
+  start_time   DateTime
+  end_time     DateTime
+  is_available Boolean  @default(true)
+  booking_id   String?  @unique
+  created_at   DateTime @default(now())
+}
+
+model Team {
+  id                 String   @id @default(uuid())
+  name               String
+  logo_url           String?
+  region             String?
+  achievements       Json?
+  collaboration_from DateTime?
+  collaboration_to   DateTime?
+  is_featured        Boolean  @default(false)
+  sort_order         Int      @default(0)
+  created_at         DateTime @default(now())
+
+  players Player[]
+}
+
+model Player {
+  id             String   @id @default(uuid())
+  user_id        String?  @unique
+  display_name   String
+  real_name      String?
+  nationality    String?
+  position       String?
+  current_team_id String?
+  avatar_url     String?
+  stats_json     Json?
+  coach_notes    String?
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+
+  user           User?    @relation(fields: [user_id], references: [id])
+  current_team   Team?    @relation(fields: [current_team_id], references: [id])
+  match_stats    MatchStat[]
+  training_logs  TrainingLog[]
+  assessments    TalentAssessment[]
+}
+
+model MatchStat {
+  id         String   @id @default(uuid())
+  player_id  String
+  match_date DateTime
+  rating     Float?
+  adr        Float?
+  kast       Float?
+  kpr        Float?
+  dpr        Float?
+  impact     Float?
+  map_name   String?
+  opponent   String?
+  source     String?
+  created_at DateTime @default(now())
+
+  player     Player   @relation(fields: [player_id], references: [id], onDelete: Cascade)
+}
+
+model TrainingLog {
+  id               String   @id @default(uuid())
+  player_id        String
+  session_type     String
+  duration_minutes Int?
+  notes            String?
+  homework         String?
+  created_at       DateTime @default(now())
+
+  player           Player   @relation(fields: [player_id], references: [id], onDelete: Cascade)
+}
+
+model TalentAssessment {
+  id                    String   @id @default(uuid())
+  player_id             String?
+  user_id               String?
+  mouse_control_score   Float
+  left_precision_score  Float
+  right_precision_score Float
+  ergonomics_score      Float
+  reaction_speed_score  Float
+  raw_data_json         Json
+  report_json           Json
+  created_at            DateTime @default(now())
+
+  player Player? @relation(fields: [player_id], references: [id])
+  user   User?   @relation(fields: [user_id], references: [id])
+}
+
+model Partnership {
+  id           String   @id @default(uuid())
+  name         String
+  logo_url     String?
+  type         String
+  description  String?
+  url          String?
+  display_order Int     @default(0)
+  is_active    Boolean  @default(true)
+  created_at   DateTime @default(now())
+}
+
+model CommunityPost {
+  id         String   @id @default(uuid())
+  author_id  String
+  title      String
+  content    String
+  type       String   // weekly_review / share / discussion
+  visibility String   // public / members_only
+  tags       String[]
+  view_count Int      @default(0)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}

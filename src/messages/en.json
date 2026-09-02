@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "title": "WineCellar — CS2 Esports Coach",
+    "description": "Professional CS2 esports coaching: 1-on-1 coaching, team training, demo review, talent assessment."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "booking": "Booking",
+    "portfolio": "Portfolio",
+    "players": "Players",
+    "assessment": "Assessment",
+    "community": "Community",
+    "about": "About",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "WineCellar",
+    "subtitle": "酒窖",
+    "tagline": "Professional CS2 Esports Coach",
+    "description": "From individual skill development to team tactical systems, from talent assessment to growth tracking — systematic improvement for your esports journey.",
+    "cta_booking": "Book Now",
+    "cta_assessment": "Free Assessment"
+  },
+  "services": {
+    "title": "Services & Pricing",
+    "subtitle": "Transparent pricing, no hidden fees",
+    "unit_hour": "hour",
+    "unit_map": "map",
+    "unit_match": "match",
+    "calculator": {
+      "title": "Price Calculator",
+      "select_service": "Select Service",
+      "quantity": "Quantity",
+      "tier": "Tier",
+      "total": "Total",
+      "currency": "¥"
+    },
+    "list": {
+      "coaching_1on1": {
+        "name": "1-on-1 Coaching",
+        "desc": "Personalized training plan targeting your weaknesses"
+      },
+      "team_boost": {
+        "name": "Team Boost",
+        "desc": "Team tactical system building and coordination training"
+      },
+      "demo_review_personal": {
+        "name": "Personal Demo Review",
+        "desc": "In-depth analysis of a single map gameplay"
+      },
+      "demo_review_team": {
+        "name": "Team Demo Review",
+        "desc": "Full BoX series tactical review"
+      },
+      "team_sparring": {
+        "name": "Team Sparring",
+        "desc": "Live practice matches with real-time feedback"
+      },
+      "position_tutorial": {
+        "name": "Position Tutorial",
+        "desc": "Position-specific training by depth level",
+        "tier_basic": "Basic",
+        "tier_advanced": "Advanced",
+        "tier_master": "Master"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": "How do I book?",
+      "a1": "Select a service, submit the request form, and pay the deposit after coach confirmation to lock the slot.",
+      "q2": "What payment methods are accepted?",
+      "a2": "WeChat Pay and Alipay. Stripe for international clients (coming soon).",
+      "q3": "Can I get a refund?",
+      "a3": "Full refund before direction confirmation. After confirmation, deposit covers time already invested.",
+      "q4": "Are there limits on revisions?",
+      "a4": "Unlimited revisions within the agreed direction. Major direction changes are treated as new projects."
+    },
+    "membership": {
+      "title": "WineCellar Membership",
+      "subtitle": "Team-wide learning experience",
+      "status": "Coming Soon",
+      "notify": "Notify me when available"
+    }
+  },
+  "booking": {
+    "title": "Book a Service",
+    "mode_a": "Pick a Time",
+    "mode_b": "Submit Request",
+    "form": {
+      "service": "Select Service",
+      "contact": "Contact Info",
+      "game_id": "Game ID",
+      "wechat": "WeChat ID",
+      "description": "Requirements",
+      "preferred_time": "Preferred Time",
+      "submit": "Submit Booking",
+      "success": "Booking submitted, awaiting coach confirmation"
+    }
+  },
+  "assessment": {
+    "title": "Talent Assessment",
+    "subtitle": "Free · Retestable · Track Growth",
+    "start": "Start Assessment",
+    "dimensions": {
+      "mouse_control": "Mouse Control",
+      "left_precision": "Left Precision",
+      "right_precision": "Right Precision",
+      "ergonomics": "Ergonomics & Comfort",
+      "reaction": "Reaction Speed"
+    },
+    "report": {
+      "title": "Assessment Report",
+      "percentile": "Top {percent}% of test takers",
+      "history": "Assessment History",
+      "suggestion": "Training Suggestions"
+    }
+  },
+  "common": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "loading": "Loading...",
+    "coming_soon": "Coming Soon"
+  }
+}

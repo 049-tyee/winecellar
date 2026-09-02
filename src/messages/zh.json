@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "title": "酒窖 WineCellar — CS2 电竞教练",
+    "description": "专业 CS2 电子竞技教练服务，提供 1对1 Coaching、团队训练、Demo 复盘、天赋测评。"
+  },
+  "nav": {
+    "home": "首页",
+    "services": "服务与定价",
+    "booking": "预约",
+    "portfolio": "合作履历",
+    "players": "选手数据",
+    "assessment": "天赋测评",
+    "community": "酒窖社群",
+    "about": "关于",
+    "admin": "管理后台"
+  },
+  "hero": {
+    "title": "酒窖",
+    "subtitle": "WineCellar",
+    "tagline": "专业 CS2 电子竞技教练",
+    "description": "从个人技术打磨到团队战术体系，从天赋测评到成长追踪，为你的电竞之路提供系统性提升方案。",
+    "cta_booking": "立即预约",
+    "cta_assessment": "免费天赋测评"
+  },
+  "services": {
+    "title": "服务与定价",
+    "subtitle": "明码标价，所见即所得",
+    "unit_hour": "小时",
+    "unit_map": "图",
+    "unit_match": "场",
+    "calculator": {
+      "title": "报价计算器",
+      "select_service": "选择服务",
+      "quantity": "数量",
+      "tier": "等级",
+      "total": "合计",
+      "currency": "¥"
+    },
+    "list": {
+      "coaching_1on1": {
+        "name": "1对1 Coaching",
+        "desc": "个性化训练方案，针对你的弱点定制提升计划"
+      },
+      "team_boost": {
+        "name": "团队提升",
+        "desc": "全队战术体系构建与配合训练"
+      },
+      "demo_review_personal": {
+        "name": "个人 Demo 复盘",
+        "desc": "单张地图对局深度分析"
+      },
+      "demo_review_team": {
+        "name": "团队 Demo 复盘",
+        "desc": "整场 BoX 系列战术复盘"
+      },
+      "team_sparring": {
+        "name": "团队陪练",
+        "desc": "实战陪练 + 即时反馈"
+      },
+      "position_tutorial": {
+        "name": "单图位置教学",
+        "desc": "按位置深度分级教学",
+        "tier_basic": "基础",
+        "tier_advanced": "进阶",
+        "tier_master": "精通"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "如何开始预约？",
+      "a1": "选择服务后提交需求表单，教练确认后支付定金即可锁定档期。",
+      "q2": "付款方式是什么？",
+      "a2": "支持微信支付和支付宝。国际客户可使用 Stripe（即将上线）。",
+      "q3": "可以退款吗？",
+      "a3": "方向确认版之前可全额退款。确认方向后定金用于已投入的创作时间。",
+      "q4": "修改次数有限制吗？",
+      "a4": "朝既定方向的修正不限次数。变更整体方向视为新方案，另行计费。"
+    },
+    "membership": {
+      "title": "酒窖会员",
+      "subtitle": "随队学习整队打法",
+      "status": "敬请期待",
+      "notify": "订阅上线通知"
+    }
+  },
+  "booking": {
+    "title": "预约服务",
+    "mode_a": "直接选时间",
+    "mode_b": "提交需求",
+    "form": {
+      "service": "选择服务",
+      "contact": "联系方式",
+      "game_id": "游戏 ID",
+      "wechat": "微信号",
+      "description": "需求描述",
+      "preferred_time": "期望时间",
+      "submit": "提交预约",
+      "success": "预约已提交，等待教练确认"
+    }
+  },
+  "assessment": {
+    "title": "天赋测评",
+    "subtitle": "免费 · 可重复测试 · 追踪成长",
+    "start": "开始测评",
+    "dimensions": {
+      "mouse_control": "鼠标掌控度",
+      "left_precision": "向左定位精准度",
+      "right_precision": "向右定位精准度",
+      "ergonomics": "鼠标受力与舒适度",
+      "reaction": "反应速度"
+    },
+    "report": {
+      "title": "测评报告",
+      "percentile": "超过 {percent}% 的测试者",
+      "history": "测评历史",
+      "suggestion": "训练建议"
+    }
+  },
+  "common": {
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出",
+    "submit": "提交",
+    "cancel": "取消",
+    "confirm": "确认",
+    "loading": "加载中...",
+    "coming_soon": "敬请期待"
+  }
+}
