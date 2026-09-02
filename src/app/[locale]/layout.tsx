@@ -16,9 +16,30 @@ export async function generateMetadata({
   params: { locale: Locale };
 }): Promise<Metadata> {
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
   return {
-    title: messages.metadata.title,
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: messages.metadata.title,
+      template: `%s | ${locale === 'zh' ? '酒窖 WineCellar' : 'WineCellar'}`,
+    },
     description: messages.metadata.description,
+    keywords:
+      locale === 'zh'
+        ? ['CS2', '电竞教练', 'CS2 教练', 'Demo 复盘', '天赋测评', '酒窖', 'WineCellar']
+        : ['CS2', 'esports coach', 'CS2 coaching', 'demo review', 'talent assessment', 'WineCellar'],
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { zh: '/zh', en: '/en' },
+    },
+    openGraph: {
+      title: messages.metadata.title,
+      description: messages.metadata.description,
+      siteName: locale === 'zh' ? '酒窖 WineCellar' : 'WineCellar',
+      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
+      type: 'website',
+    },
+    robots: { index: true, follow: true },
   };
 }
 
