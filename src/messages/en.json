@@ -334,7 +334,8 @@
     "action_confirm": "Confirm",
     "action_reject": "Reject",
     "action_paid": "Mark Paid",
-    "action_complete": "Mark Complete"
+    "action_complete": "Mark Complete",
+    "col_slot": "Selected slot"
   },
   "home": {
     "stats": {

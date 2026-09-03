@@ -67,6 +67,7 @@ export interface BookingRow {
   wechat: string;
   description: string;
   preferredTime: string;
+  scheduledAt?: string | null;
   status: local.BookingRecord['status'];
   createdAt: string;
 }
@@ -76,7 +77,7 @@ export async function fetchBookings(): Promise<BookingRow[]> {
   const reverse = Object.fromEntries(Object.entries(ids).map(([k, v]) => [v, k]));
   const { data, error } = await supabase
     .from('Booking')
-    .select('id,service_id,tier_level,quantity,total_price,status,notes,contact_info,created_at')
+    .select('id,service_id,tier_level,quantity,total_price,status,notes,contact_info,created_at,scheduled_at')
     .order('created_at', { ascending: false });
   if (error) throw error;
   return (data ?? []).map((r) => {
@@ -91,6 +92,7 @@ export async function fetchBookings(): Promise<BookingRow[]> {
       wechat: ci.wechat ?? '',
       description: ci.description ?? '',
       preferredTime: r.notes ?? '',
+      scheduledAt: r.scheduled_at,
       status: r.status,
       createdAt: r.created_at,
     };

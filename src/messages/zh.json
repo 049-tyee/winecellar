@@ -334,7 +334,8 @@
     "action_confirm": "确认预约",
     "action_reject": "拒绝",
     "action_paid": "标记已付款",
-    "action_complete": "标记完成"
+    "action_complete": "标记完成",
+    "col_slot": "选定时段"
   },
   "home": {
     "stats": {

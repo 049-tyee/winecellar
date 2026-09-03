@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { fetchBookings, setBookingStatus, type BookingRow } from '@/lib/db';
 import { getBookings, updateBookingStatus } from '@/lib/storage';
 import { SERVICES } from '@/lib/services';
@@ -19,6 +19,7 @@ const STATUS_COLORS: Record<Status, string> = {
 export default function BookingManager() {
   const t = useTranslations('admin');
   const ts = useTranslations('services');
+  const locale = useLocale();
   const [bookings, setBookings] = useState<BookingRow[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -95,9 +96,14 @@ export default function BookingManager() {
                     {t('col_wechat')}: <span className="text-neutral-200">{b.wechat}</span>
                   </span>
                   <span>
-                    {t('col_time')}: <span className="text-neutral-200">{b.preferredTime}</span>
+                    {t('col_time')}: <span className="text-neutral-200">{b.preferredTime || '—'}</span>
                   </span>
                 </div>
+                {b.scheduledAt && (
+                  <p className="text-sm text-[#B8860B]">
+                    {t('col_slot')}: {new Date(b.scheduledAt).toLocaleString(locale === 'zh' ? 'zh-CN' : 'en-US', { month: 'numeric', day: 'numeric', weekday: 'short', hour: '2-digit', minute: '2-digit' })}
+                  </p>
+                )}
                 {b.description && <p className="text-sm text-neutral-500">{b.description}</p>}
                 <div className="flex gap-2 pt-1">
                   {b.status === 'PENDING' && (
