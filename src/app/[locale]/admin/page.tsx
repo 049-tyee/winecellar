@@ -6,6 +6,8 @@ import AdminGuard from '@/components/admin/AdminGuard';
 import SectionHeading from '@/components/SectionHeading';
 import { getTranslations } from 'next-intl/server';
 
+export const metadata = { robots: { index: false, follow: false } };
+
 export default async function AdminPage({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'admin' });
 

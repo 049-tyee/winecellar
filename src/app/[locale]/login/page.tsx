@@ -4,6 +4,8 @@ import SectionHeading from '@/components/SectionHeading';
 import LoginForm from '@/components/auth/LoginForm';
 import { getTranslations } from 'next-intl/server';
 
+export const metadata = { robots: { index: false, follow: false } };
+
 export default async function LoginPage({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'auth' });
 
